@@ -13,6 +13,12 @@
 		85858B8D242D081400C5ECA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85858B8C242D081400C5ECA2 /* Assets.xcassets */; };
 		85858B90242D081400C5ECA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85858B8E242D081400C5ECA2 /* LaunchScreen.storyboard */; };
 		85858BA0242D0A9200C5ECA2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85858B9F242D0A9200C5ECA2 /* CloudKit.framework */; };
+		E040D72426C1C67400CF4B31 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E040D72326C1C67400CF4B31 /* Entry.swift */; };
+		E040D72626C1C69B00CF4B31 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E040D72526C1C69B00CF4B31 /* EntryController.swift */; };
+		E040D72926C1D0F500CF4B31 /* EntryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E040D72826C1D0F500CF4B31 /* EntryError.swift */; };
+		E040D72B26C20ED500CF4B31 /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E040D72A26C20ED500CF4B31 /* EntryListTableViewController.swift */; };
+		E040D72D26C2149E00CF4B31 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E040D72C26C2149E00CF4B31 /* DateExtension.swift */; };
+		E040D72F26C2244000CF4B31 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E040D72E26C2244000CF4B31 /* EntryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +31,12 @@
 		85858B91242D081400C5ECA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85858B9D242D0A8B00C5ECA2 /* CloudKitJournal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudKitJournal.entitlements; sourceTree = "<group>"; };
 		85858B9F242D0A9200C5ECA2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		E040D72326C1C67400CF4B31 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		E040D72526C1C69B00CF4B31 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		E040D72826C1D0F500CF4B31 /* EntryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryError.swift; sourceTree = "<group>"; };
+		E040D72A26C20ED500CF4B31 /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
+		E040D72C26C2149E00CF4B31 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		E040D72E26C2244000CF4B31 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +72,10 @@
 			isa = PBXGroup;
 			children = (
 				85858B9D242D0A8B00C5ECA2 /* CloudKitJournal.entitlements */,
-				85858B89242D081200C5ECA2 /* Main.storyboard */,
+				E040D71E26C1C54000CF4B31 /* Models */,
+				E040D71D26C1C53900CF4B31 /* Controllers */,
+				E040D71C26C1C53100CF4B31 /* Views */,
+				E040D72726C1D0C200CF4B31 /* Helpers+Extensions */,
 				85858B97242D082D00C5ECA2 /* Resources */,
 			);
 			path = CloudKitJournal;
@@ -84,6 +99,73 @@
 				85858B9F242D0A9200C5ECA2 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E040D71C26C1C53100CF4B31 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E040D71F26C1C54600CF4B31 /* CustomViews */,
+				E040D72026C1C54E00CF4B31 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E040D71D26C1C53900CF4B31 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E040D72226C1C56000CF4B31 /* ModelControllers */,
+				E040D72126C1C55800CF4B31 /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E040D71E26C1C54000CF4B31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E040D72326C1C67400CF4B31 /* Entry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E040D71F26C1C54600CF4B31 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		E040D72026C1C54E00CF4B31 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				85858B89242D081200C5ECA2 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E040D72126C1C55800CF4B31 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E040D72A26C20ED500CF4B31 /* EntryListTableViewController.swift */,
+				E040D72E26C2244000CF4B31 /* EntryDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E040D72226C1C56000CF4B31 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E040D72526C1C69B00CF4B31 /* EntryController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		E040D72726C1D0C200CF4B31 /* Helpers+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E040D72826C1D0F500CF4B31 /* EntryError.swift */,
+				E040D72C26C2149E00CF4B31 /* DateExtension.swift */,
+			);
+			path = "Helpers+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,7 +195,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Zebadiah Watson";
 				TargetAttributes = {
 					85858B7F242D081200C5ECA2 = {
@@ -158,7 +240,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				85858B84242D081200C5ECA2 /* AppDelegate.swift in Sources */,
+				E040D72D26C2149E00CF4B31 /* DateExtension.swift in Sources */,
+				E040D72926C1D0F500CF4B31 /* EntryError.swift in Sources */,
+				E040D72B26C20ED500CF4B31 /* EntryListTableViewController.swift in Sources */,
+				E040D72626C1C69B00CF4B31 /* EntryController.swift in Sources */,
 				85858B86242D081200C5ECA2 /* SceneDelegate.swift in Sources */,
+				E040D72F26C2244000CF4B31 /* EntryDetailViewController.swift in Sources */,
+				E040D72426C1C67400CF4B31 /* Entry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +298,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -270,6 +359,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -304,13 +394,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CloudKitJournal/CloudKitJournal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4J7B9732LY;
+				DEVELOPMENT_TEAM = 3XGZGZGB55;
 				INFOPLIST_FILE = "$(SRCROOT)/CloudKitJournal/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CloudKitJournal;
+				PRODUCT_BUNDLE_IDENTIFIER = "CloudKitJournal-Natalie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,13 +413,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CloudKitJournal/CloudKitJournal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4J7B9732LY;
+				DEVELOPMENT_TEAM = 3XGZGZGB55;
 				INFOPLIST_FILE = "$(SRCROOT)/CloudKitJournal/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CloudKitJournal;
+				PRODUCT_BUNDLE_IDENTIFIER = "CloudKitJournal-Natalie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
